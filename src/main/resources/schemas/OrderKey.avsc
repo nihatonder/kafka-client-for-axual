@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "OrderKey",
+  "namespace" : "io.axual.client.example.schema",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": "string",
+      "doc": "Unique identifier for the order"
+    }
+  ]
+}
