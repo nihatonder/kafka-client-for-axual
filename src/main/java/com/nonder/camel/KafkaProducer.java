@@ -1,6 +1,6 @@
 package com.nonder.camel;
 
-import com.nonder.model.AvroBuilder;
+import com.nonder.builder.AvroBuilder;
 import io.axual.client.example.schema.Order;
 import io.axual.client.example.schema.OrderKey;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -17,11 +17,9 @@ public class KafkaProducer extends RouteBuilder {
     public void configure() {
         from("timer:avro?period=10000") // Trigger every 10 seconds, adjust as needed
                 .process(exchange -> {
-                    // Create Avro key object
                     OrderKey key = avroBuilder.buildOrderKey();
                     exchange.setProperty("AvroKey", key);
 
-                    // Create Avro value object
                     Order value = avroBuilder.buildOrder(key, "XYZ10", 3);
                     exchange.setProperty("AvroValue", value);
                 })

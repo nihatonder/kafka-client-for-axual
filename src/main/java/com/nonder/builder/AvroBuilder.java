@@ -1,4 +1,4 @@
-package com.nonder.model;
+package com.nonder.builder;
 
 import io.axual.client.example.schema.Order;
 import io.axual.client.example.schema.OrderKey;
