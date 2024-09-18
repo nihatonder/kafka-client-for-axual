@@ -11,6 +11,8 @@ Additionally, you should have already created the application, topic, and schema
 The application and topic should also be properly configured.
 When you run the application, it will start producing messages to Axual and consuming the same messages from Axual.
 Please note that the current trial version of Axual does not support the Avro schema.
+You can check out this Medium article for more details:
+https://medium.com/@nihatonder87/kafka-client-for-axual-with-camel-kafka-component-bb1b89acd638
 
 ## Related Guides
 
